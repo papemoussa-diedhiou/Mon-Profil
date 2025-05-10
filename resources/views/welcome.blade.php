@@ -11,21 +11,19 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-         :root {
-            --primary-color: #27ae60;  /* Vert riche */
-            --secondary-color: #2c3e50; /* Noir bleuté conservé pour les textes */
-            --accent-color: #f1c40f;   /* Jaune vif */
-            --light-color: #ffffff;    /* Blanc pur */
-            --dark-color: #16a085;     /* Vert océan */
-            --complementary-color: #e74c3c; /* Rouge conservé pour les alertes */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
         }
 
-         body {
-        font-family: 'Poppins', sans-serif;
-        color: #2c3e50;           /* Couleur de texte principale */
-        line-height: 1.6;
-        overflow-x: hidden;
-        background-color: #f9f9f9; /* Fond légèrement gris */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4 {
@@ -38,8 +36,8 @@
         }
 
         .navbar {
-            background-color: var(--light-color);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 15px 0;
             transition: all 0.3s ease;
         }
@@ -82,8 +80,8 @@
         }
 
         .hero {
-                background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
-        color: var(--light-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
             padding: 100px 0;
             position: relative;
             overflow: hidden;
@@ -122,7 +120,7 @@
 
         .btn-primary {
             background-color: var(--primary-color);
-        border-color: var(--primary-color);
+            border-color: var(--primary-color);
             padding: 10px 25px;
             border-radius: 30px;
             font-weight: 500;
@@ -130,8 +128,8 @@
         }
 
         .btn-primary:hover {
-            background-color: #219653; /* Vert plus foncé */
-        border-color: #219653;
+            background-color: #2980b9;
+            border-color: #2980b9;
             transform: translateY(-2px);
         }
 
@@ -143,8 +141,7 @@
         }
 
         .btn-outline-light:hover {
-            color: var(--primary-color);
-        background-color: var(--light-color);
+            transform: translateY(-2px);
         }
 
         section {
@@ -168,18 +165,10 @@
             transform: translateX(-50%);
         }
 
-        /* .about-img {
-            border-radius: 10px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        } */
         .about-img {
             border-radius: 10px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
-            max-width: 380px; /* Ajoutez cette ligne pour limiter la largeur */
-            height: auto; /* Conserve les proportions */
-            width: 100%; /* S'adapte au conteneur parent */
         }
 
         .about-img:hover {
@@ -202,7 +191,7 @@
         }
 
         .progress-bar {
-             background-color: var(--primary-color);
+            background-color: var(--primary-color);
         }
 
         .portfolio-item {
@@ -212,12 +201,11 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
             position: relative;
-             border: 1px solid rgba(39, 174, 96, 0.1);
         }
 
         .portfolio-item:hover {
             transform: translateY(-10px);
-              box-shadow: 0 10px 20px rgba(39, 174, 96, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
         .portfolio-img {
@@ -232,7 +220,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-             background: rgba(39, 174, 96, 0.9); /* Vert avec transparence */
+            background: rgba(52, 152, 219, 0.9);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -342,8 +330,8 @@
         }
 
         footer {
-           background-color: var(--primary-color);
-        color: var(--light-color);
+            background-color: var(--secondary-color);
+            color: white;
             padding: 30px 0;
         }
 
@@ -355,7 +343,7 @@
             height: 40px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            color: rgb(19, 24, 182);
+            color: white;
             margin: 0 10px;
             transition: all 0.3s;
         }
@@ -441,30 +429,6 @@
                 left: 0;
             }
         }
-
-            /* Modal */
-        .modal-header {
-            background-color: var(--primary-color);
-            color: var(--light-color);
-        }
-            /* Accents */
-        .text-accent {
-            color: var(--accent-color) !important;
-        }
-
-        .bg-accent {
-            background-color: var(--accent-color) !important;
-        }
-        /* Badges */
-        .badge.bg-primary {
-            background-color: var(--primary-color) !important;
-        }
-           /* Animation au survol */
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-            background: rgba(33, 150, 83, 0.95); /* Vert légèrement plus foncé */
-        }
-
     </style>
 
 </head>
@@ -1526,7 +1490,7 @@
         window.addEventListener('load', checkScroll);
 
         // Form submission
-      
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
